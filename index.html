@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section-content {
+            display: none; /* Hidden by default */
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #131851;
+            background: #728ca9;
+            font-family: Arial, sans-serif;
+            width: 500px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Section Dropdown</h1>
+    <select>
+        <option value="section1">Section 1</option>
+        <option value="section2">Section 2</option>
+        <option value="section3">Section 3</option>
+    </select>
+
+    <button id="showAllBtn">Show All Sections</button>
+    <button id="hideAllBtn">Hide All Sections</button>
+
+    <div id="section1" class="section-content">
+        <h2>Section 1</h2>
+        <p>This is Section 1 content.</p>
+    </div>
+    <div id="section2" class="section-content">
+        <h2>Section 2</h2>
+        <p>This is Section 2 content.</p>
+    </div>
+    <div id="section3" class="section-content">
+        <h2>Section 3</h2>
+        <p>This is Section 3 content.</p>
+    </div>
+
+    <script>
+        document.getElementById('showAllBtn').onclick = function() {
+            document.querySelectorAll('.section-content').forEach(function(div) {
+                div.style.display = 'block';// Show all sections
+            });
+        };
+        document.getElementById('hideAllBtn').onclick = function() {
+            document.querySelectorAll('.section-content').forEach(function(div) {
+                div.style.display = 'none';// Hide all sections
+            });
+        };
+    </script>
+
+</body>
+</html>
